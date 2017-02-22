@@ -17,7 +17,7 @@ The goals / steps of this project are the following:
 [image2]: ./test_images/test1.jpg "Road"
 [image3]: ./examples/binary_combo_example.jpg "Binary Example"
 [image4]: ./examples/warped_straight_lines.jpg "Warp Example"
-[image5]: ./examples/color_fit_lines.jpg "Fit Visual"
+[image5]: ./report/color_fit_lines.jpg "Fit Visual"
 [image6]: ./report/out_test1.jpg "Output"
 [image7]: ./report/test1.jpg "Road Transformed"
 [image8]: ./report/s_channel.jpg "S Channel"
