@@ -138,6 +138,7 @@ right_fit = np.polyfit(righty, rightx, 2)
 ##### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
 The code for calculating the radius of curvature is containd in the function `compute_radius()` in the file `project.py`. The calculation is based on this formula for finding the curvature:
+
 ![alt text][image11]
 
 To make sure the radius is in meters and not only in pixels, the following conversion coefficients were used:
@@ -146,6 +147,14 @@ To make sure the radius is in meters and not only in pixels, the following conve
 ym_per_pix = 30/720 # meters per pixel in y dimension
 xm_per_pix = 3.7/700 # meters per pixel in x dimension
 ```
+The position of the vehicle with respect to center is calculated in the function `compute_distance()` in the file `project.py`. The position is calculated by comparing the image center to the lanes center:
+```
+xm_per_pix = 3.7/700 # meters per pixel in x dimension
+
+offset = (leftx[-1] + rightx[-1]) / 2
+offset = xm_per_pix*(offset - 640.0)
+```
+
 ##### 6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
 
 I implemented this step in `project.py` in the function `draw_lines()`.  Here is an example of my result on a test image:
